@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogar para todos</title>
+    <!-- Importamos el CSS de Bootstrap v5.3.3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <!-- Barras de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary my-2 pt-0 mt-0">
+        <div class="container ">
+            <a class="navbar-brand text-white" href="./index.html">
+                <img src="./IMG/LOGO.png" alt="Logo" height="50">
+                <span>Hogar para todos</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".MenuColapsar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse MenuColapsar fs-5">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#"> 
+                        <i class="bi bi-person-fill"></i>
+                        Iniciar Sesión</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#"> Perfil </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#">
+                        <i class="bi bi-cart2"></i>
+                        Carrito compra </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary my-2 sticky-top">
+        <div class="container ">
+            <div class="collapse navbar-collapse MenuColapsar">
+                <ul class="navbar-nav mx-auto text-white fs-5">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Acerca_De_Nosotros.html">Acerca de nosotros</a>
+                    </li>
+
+                    <li class="nav-item mx-3 active">
+                        <a class="nav-link text-black" href="./Contactanos.html"><b>Contactanos/Sucursales</b></a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#"> Tienda en linea </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#"> Conoce a nuestras mascotas </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6A8DFF;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .back-link {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-info {
+            display: flex;
+            align-items: center;
+        }
+        .product-image {
+            width: 300px;
+            height: 250px;
+            background-color: white;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .cart-info {
+            text-align: right;
+        }
+        .cart-info .price, .cart-info .quantity {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        .cart-info .quantity {
+            border: 2px solid white;
+        }
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">&lt; Volver</div>
+        <div class="product-info">
+            <div class="product-image"></div>
+            <div class="product-name">Nombre producto</div>
+        </div>
+        <div class="cart-info">
+            <div class="price">Precio</div>
+            <div class="quantity">Cantidad</div>
+            <div class="total">Total: XXX</div>
+        </div>
+    </div>
+</body>
+</html>
