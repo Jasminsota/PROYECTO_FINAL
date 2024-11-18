@@ -5,3 +5,26 @@
     margin: 0;
     object-fit: cover;
 }
+
+.sm_button{
+    max-width: 50px;
+}
+
+.product-area{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_pvw{
+    width: 100%;
+}
+.text-image{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
