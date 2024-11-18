@@ -28,3 +28,9 @@
     padding: 8px 12px;
     border-radius: 5px;
 }
+
+.pet_photo{
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+}
