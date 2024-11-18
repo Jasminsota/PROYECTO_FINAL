@@ -100,13 +100,24 @@
                         <p id="DescripcionMascota">Cargando descripción de la mascota...</p>
                     </div>
                 </div>
-                <div class="row my-3">
-                    <div class="col text-center">
-                        <a class="btn btn-primary" href="./Catalogo_adopcion.html" role="button"><b>Presentar solicitud de adopción</b></a>
-                    </div>
-                </div>
             </div>
         </div>
+     </div>
+     <div class="container text-center p-3">
+        <h4 class="text-primary"> ¿Deseas adoptar a esta mascota?</h4>
+        <p>Si has encontrado a tu nuevo compañero ideal, estamos encantados de que quieras darle un hogar 
+            lleno de amor. Para continuar, solo necesitas escribir en el campo de texto una breve 
+            justificación sobre por qué te gustaría adoptar a esta mascota.<br><br>
+            Tu solicitud será revisada cuidadosamente por nuestro equipo, asegurándonos 
+            de encontrar el mejor hogar para cada peludo. Nos pondremos en contacto contigo 
+            lo antes posible para darte una respuesta y, con suerte, ¡darle la bienvenida a un nuevo 
+            miembro de tu familia!</p>
+            <form class="w-100">
+                <label for="DescripcionUsuario" class="form-label"><b>¿Por qué deseas adoptar a esta mascota?: </b></label>
+                <textarea id="DescripcionUsuario" name="Descripcion" class="form-control"  rows="6" placeholder="Describe por qué deberías ser aceptado como adoptante de esta mascota..." required></textarea>
+                <input class="btn btn-primary mt-3" type="submit" value="Mandar solicitud de adopción">
+            </form>
+            
      </div>
 
     <!-- Footer -->
