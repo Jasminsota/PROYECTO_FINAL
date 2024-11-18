@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="#"> Perfil </a>
+                        <a class="nav-link text-white" href="./Perfil.html"> Perfil </a>
                     </li>
 
                     <li class="nav-item mx-3">
@@ -72,21 +72,21 @@
         </div>
     </nav>
 
-    <!-- INICIO DE SESION -->
+    <!-- REGISTRO -->
     <div class="container-fluid p-4">
         <div class="container bg-primary text-white rounded p-5 container-fluid">
             <div class="row">
                 <h4 class="text-center p-0 mb-3">REGISTRO</h4>
                 <div class="col">
-                    <a href="./index.html" class="text-white fs-2">
+                    <a href="./Inicio de Sesion.html" class="text-white fs-2">
                         <i class="bi bi-arrow-left"></i>
                         <span>Volver</span>
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 bg-white rounded text-center">
-                    <img src="./IMG/LOGO.png" class=" img-fluid">
+                <div class="col-lg-5 my-auto text-center">
+                    <img src="./IMG/LOGO.png" class=" img-fluid bg-white rounded">
                 </div>
                 <div class="col-lg-7 align-content-center mt-4 text-center">
                     <h4> ¡Únete a nuestra comunidad! </h5>
@@ -95,41 +95,41 @@
                         de tus productos favoritos para tus mascotas, presenta solicitudes de adopción y da el 
                         primer paso para cambiar la vida de una mascota en busca de un hogar.<br>
                     </p>
-                    <form>
+                    <form id="FormRegistro">
                         <div class="row my-3">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Nombre..." aria-label="Nombre">
+                              <input type="text" class="form-control" placeholder="Nombre..." aria-label="Nombre" id="InputRegNombre">
                             </div>
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Apellido..." aria-label="Apellido">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col">
-                              <input type="tel" class="form-control" placeholder="Telefono..." aria-label="Telefono">
+                              <input type="text" class="form-control" placeholder="Apellido..." aria-label="Apellido" id="InputRegApellido">
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Ciudad..." aria-label="Ciudad">
+                              <input type="tel" class="form-control" placeholder="Telefono..." aria-label="Telefono" id="InputRegTelefono">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                              <input type="text" class="form-control" placeholder="Ciudad..." aria-label="Ciudad" id="InputRegCiudad">
                             </div>
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Direccion..." aria-label="Direccion">
+                              <input type="text" class="form-control" placeholder="Direccion..." aria-label="Direccion" id="InputRegDireccion">
                             </div>
                         </div>
                         
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Codigo postal..." aria-label="Codigo postal">
+                                <input type="text" class="form-control" placeholder="Codigo postal..." aria-label="Codigo postal" id="InputRegCP">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
-                                <input type="email" class="form-control mb-3" placeholder="Email..." aria-label="Email">
-                            <input type="password" class="form-control" placeholder="Contraseña..." aria-label="password">
+                                <input type="email" class="form-control mb-3" placeholder="Email..." aria-label="Email" id="InputRegEmail">
+                            <input type="password" class="form-control" placeholder="Contraseña..." aria-label="password" id="InputRegContraseña">
                             </div>
                         </div>
 

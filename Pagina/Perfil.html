@@ -30,12 +30,12 @@
 
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-black" href="./Inicio de Sesion.html"> 
-                        <i class="bi bi-person-fill"></i><b>Iniciar sesión</b></a>
+                        <a class="nav-link text-white" href="./Inicio de Sesion.html"> 
+                        <i class="bi bi-person-fill"></i>Iniciar sesión</a>
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Perfil.html"> Perfil </a>
+                        <a class="nav-link text-black active" href="./Perfil.html"> <b>Perfil</b> </a>
                     </li>
 
                     <li class="nav-item mx-3">
@@ -72,11 +72,11 @@
         </div>
     </nav>
 
-    <!-- INICIO DE SESION -->
+    <!-- PERFIL -->
     <div class="container-fluid p-4">
         <div class="container bg-primary text-white rounded p-5 container-fluid">
             <div class="row">
-                <h4 class="text-center p-0 mb-3">INICIO DE SESION</h4>
+                <h4 class="text-center p-0 mb-3">PERFIL</h4>
                 <div class="col">
                     <a href="./index.html" class="text-white fs-2">
                         <i class="bi bi-arrow-left"></i>
@@ -88,32 +88,57 @@
                 <div class="col-lg-5 my-auto text-center">
                     <img src="./IMG/LOGO.png" class=" img-fluid bg-white rounded">
                 </div>
-                <div class="col-lg-7 align-content-center mt-4 text-center">
-                    <h4> ¡Bienvenido de vuelta! </h5>
+                <div class="col-lg-7 align-content-center mt-4 text-center pb-4">
+                    <h4> Tu Perfil </h5>
                     <p>
-                        Inicia sesión para acceder a tu cuenta y disfrutar de todos los beneficios 
-                        que tenemos para ti. Explora nuestra tienda, revisa tus pedidos o conoce más 
-                        sobre nuestras mascotas en adopción.<br>
+                        Consulta tu información personal. Toda tu información está segura con nosotros
+                         y lista para que la revises cuando lo necesites.<br>
                     </p>
-                    <form id="FormInicio">
-                        <div class="mb-3">
-                            <label for="InputInicioCorreo" class="form-label"><b>Correo Electronico: </b></label>
-                            <input type="email" class="form-control" id="InputInicioCorreo" placeholder="Ingrese su correo electronico...">
+                    <form>
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="Nombre" class="form-label"><b>Nombre:</b></label>
+                              <input type="text" class="form-control-plaintext bg-white rounded" id="Nombre" value="" readonly>
+                            </div>
+                            <div class="col">
+                              <label for="Apellido" class="form-label"><b>Apellido: </b></label>
+                              <input type="text" class="form-control-plaintext bg-white rounded" id="Apellido" value="" readonly>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="InputInicioContraseña" class="form-label"><b>Contraseña:</b></label>
-                            <input type="password" class="form-control" id="InputInicioContraseña" placeholder="Ingrese su contraseña...">
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="Telefono" class="form-label"><b>Telefono:</b></label>
+                                <input type="text" class="form-control-plaintext bg-white rounded" id="Telefono" value="" readonly>
+                            </div>
                         </div>
-                        <button class="btn btn-light text-primary" type="submit"><b>Iniciar sesión</b></button>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="Ciudad" class="form-label"><b>Ciudad:</b></label>
+                                <input type="text" class="form-control-plaintext bg-white rounded" id="Ciudad" value="" readonly>
+                            </div>
+                            <div class="col">
+                                <label for="Direccion" class="form-label"><b>Direccion</b></label>
+                                <input type="text" class="form-control-plaintext bg-white rounded" id="Direccion" value="" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="CP" class="form-label"><b>Código Postal:</b></label>
+                                <input type="text" class="form-control-plaintext bg-white rounded" id="CP" value="" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="Email" class="form-label"><b>Email: </b></label>
+                                <input type="email" class="form-control-plaintext bg-white rounded mb-3" id="Email" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
                     </form>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col">
-                    <p class="fs-4 text-center">
-                        ¿No tienes cuenta? <a href="./Registro.html" class="text-white">Registrate</a>
-                    </p>
-                </div>
             </div>
         </div>
     </div>
