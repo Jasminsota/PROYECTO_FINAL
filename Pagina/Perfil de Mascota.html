@@ -1,145 +1,139 @@
-<html>
-    <head>
-        <title>Perfil de producto</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .header {
-            background-color: #4A90E2;
-            color: white;
-            padding: 40px 0;
-        }
-        .header .logo {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 50px;
-        }
-        .header .title {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .header .nav {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 30px;
-        }
-        .header .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #4A90E2;
-        }
-        .header .nav a:hover {
-            background-color: #4A90E2;
-        }
-        .header .nav .icon {
-            margin-right: 10px;
-        }
-        .menu {
-            background-color: #E6E6E6;
-            padding: 10px 0;
-        }
-        .menu a {
-            color: #4A90E2;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .content .product-image {
-            width: 400px;
-            height: 400px;
-            border: 1px solid #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 20px;
-        }
-        .content .product-info {
-            background-color: #4A90E2;
-            color: rgb(0, 0, 0);
-            padding: 100px;
-            width: 400px;
-            text-align: left;
-        }
-        .content .product-info .back {
-            color: black;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .content .product-info .info {
-            margin-bottom: 20px;
-        }
-        .content .product-info .actions {
-            display: flex;
-            justify-content: space-between;
-        }
-        .content .product-info .actions button {
-            background-color: #000000;
-            color: rgb(0, 0, 0);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .footer {
-            background-color: #4A90E2;
-            color: white;
-            padding: 50px 0;
-            margin-top: 80px;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogar para todos</title>
+    <!-- Importamos el CSS de Bootstrap v5.3.3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="header">
-        <div class="logo">
-            <i class="fas fa-circle"></i>
-        </div>
-        <div class="title">NOMBRE DE LA PAGINA</div>
-        <div class="nav">
-            <a href="#"><i class="fas fa-user icon"></i>Inicio Sesión</a>
-            <a href="#"><i class="fas fa-user icon"></i>Perfil</a>
-            <a href="#"><i class="fas fa-shopping-cart icon"></i>Carrito Compra</a>
-        </div>
-    </div>
-    <div class="menu">
-        <a href="#">Acerca de nosotros</a>
-         <a href="#">Sucursales</a>
-        <a href="#">Tienda en Linea</a>
-         <a href="#">Conoce a nuestras mascotas</a>
-    </div>
-    <div class="content">
-        <div class="product-image">
-            <span>Foto de Matacota</span>
+    <!-- Barras de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary my-2 pt-0 mt-0">
+        <div class="container ">
+            <a class="navbar-brand text-white" href="./index.html">
+                <img src="./IMG/LOGO.png" alt="Logo" height="50">
+                <span>Hogar para todos</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".MenuColapsar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse MenuColapsar fs-5">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Inicio de Sesion.html"> 
+                        <i class="bi bi-person-fill"></i>Iniciar sesión</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Perfil.html">Perfil</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Carrito de compras.html">
+                        <i class="bi bi-cart2"></i>
+                        Carrito compra </a>
+                    </li>
+                </ul>
             </div>
-            <div class="mascota-info">
-                <a href="#" class="back">&lt; Volver</a>
-                <div class="info"></div>
-                <div class="actions">
-                    <button>Nombre de la mascota:</button>
-                    <button>Edad:</button>
-                    <button>Raza:</button>
-                    <button>Género:</button>
-                    <button>Personalidad:</button>
-                    <button>Carácter:</button>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary my-2 sticky-top">
+        <div class="container ">
+            <div class="collapse navbar-collapse MenuColapsar">
+                <ul class="navbar-nav mx-auto text-white fs-5">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Acerca_De_Nosotros.html">Acerca de nosotros</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Contactanos.html">Contactanos/Sucursales</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./tienda_en_linea.html"> Tienda en linea </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="./Catalogo_adopcion.html"> Conoce a nuestras mascotas </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PERFIL -->
+     <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-lg-4 m-auto text-center p-4">
+                <img src="./IMG/PlaceholderMascota.jpg" class="img-fluid rounded border border-primary">
+            </div>
+            <div class="col-lg-7 mx-auto">
+                <div class="row">
+                    <a href="./Catalogo_adopcion.html" class="text-black fs-2">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Volver</span>
+                    </a>
+                </div>
+                <div class="row m-3">
+                    <div class="container bg-primary text-white p-3 rounded">
+                        <h4 class="text-center" id="NombreMascota"> Cargando nombre de la mascota...</h3>
+                        <p class="fs-5"><b>Tipo: </b></p>
+                        <p id="TipoMascota"> Cargando tipo de la mascota...<br></p>
+                        <p class="fs-5"><b>Raza:</b></p>
+                        <p id="RazaMascota">Cargando raza de la mascota...</p>
+                        <p class="fs-5"><b>Caracter:</b></p>
+                        <p id="CaracterMascota">Cargando caracter de la mascota...</p>
+                        <p class="fs-5"><b>Edad:</b></p>
+                        <p id="EdadMascota">Cargando edad de la mascota...</p>
+                        <p class="fs-5"><b>Descripción:</b></p>
+                        <p id="DescripcionMascota">Cargando descripción de la mascota...</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            Footer
+     </div>
+     <div class="container text-center p-3">
+        <h4 class="text-primary"> ¿Deseas adoptar a esta mascota?</h4>
+        <p>Si has encontrado a tu nuevo compañero ideal, estamos encantados de que quieras darle un hogar 
+            lleno de amor. Para continuar, solo necesitas escribir en el campo de texto una breve 
+            justificación sobre por qué te gustaría adoptar a esta mascota.<br><br>
+            Tu solicitud será revisada cuidadosamente por nuestro equipo, asegurándonos 
+            de encontrar el mejor hogar para cada peludo. Nos pondremos en contacto contigo 
+            lo antes posible para darte una respuesta y, con suerte, ¡darle la bienvenida a un nuevo 
+            miembro de tu familia!</p>
+            <form class="w-100">
+                <label for="DescripcionUsuario" class="form-label"><b>¿Por qué deseas adoptar a esta mascota?: </b></label>
+                <textarea id="DescripcionUsuario" name="Descripcion" class="form-control"  rows="6" placeholder="Describe por qué deberías ser aceptado como adoptante de esta mascota..." required></textarea>
+                <input class="btn btn-primary mt-3" type="submit" value="Mandar solicitud de adopción">
+            </form>
+            
+     </div>
+
+    <!-- Footer -->
+     <footer class="bg-primary text-white pt-2 sticky-bottom">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2024 HogarParaTodos. Todos los derechos reservados.</p>
+                </div>
+            </div>
         </div>
-    </body>
-    </html>
-    
+     </footer>
+
+    <!-- Importamos el JS de Bootstrap v5.3.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
