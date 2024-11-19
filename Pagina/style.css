@@ -34,3 +34,9 @@
     margin: auto;
     border-radius: 10px;
 }
+
+.unhipervinculo{
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
