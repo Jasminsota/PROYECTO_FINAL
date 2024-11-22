@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogar para todos</title>
+    <!-- Importamos el CSS de Bootstrap v5.3.3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- NAVBAR OFFCANVAS -->
+    <navbar class="navbar navbar-expand-lg navbar-primary bg-primary mb-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="./index.html">
+                <img src="./IMG/LOGO.png" alt="Logo" height="50">
+                <span>Hogar para todos</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuLateral">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <section class="offcanvas offcanvas-start bg-primary w-75 p-1" id="MenuLateral" tabindex="-1">
+                <div class="offcanvas-header bg-white rounded m-3 text-center text-primary" data-bs-theme="primary">
+                    <img src="./IMG/LOGO.png" alt="Logo" height="50">
+                    <h5>Hogar para todos</h5>
+                    <button class="btn-close" type="button" aria-label="Cerrar" data-bs-dismiss="offcanvas">
+                    </button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-between px-0">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item p-2 py-md-1 my-auto">
+                            <a href="./ADMINISTRADOR_STOCK.html" class="nav-link btn bg-white rounded w-100 text-center">Productos</a>
+                        </li>
+                        <li class="nav-item p-2 py-md-1 my-auto">
+                            <a href="./ADMINISTRADOR_MASCOTAS.html" class="nav-link btn bg-white rounded w-100 text-center">Mascotas en adopción</a>
+                        </li>
+                        <li class="nav-item p-2 py-md-1 my-auto">
+                            <a href="./ADMINISTRADOR_SOLICITUDES.html" class="nav-link btn bg-white rounded w-100 text-center">Solicitudes de adopción</a>
+                        </li>
+                        <li class="nav-item p-2 py-md-1 my-auto">
+                            <a href="./REPORTE_VENTAS.html" class="nav-link btn bg-white rounded w-100 text-center"><b>Reporte de ventas</b></a>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </navbar>
+
+    <div class="container p-4">
+        <div class="row">
+            <!-- TABLA IMPORTE POR CATEGORIA -->
+            <div class="col-md-5 p-3 mx-auto text-center rounded bg-primary my-3">
+                    <h2 class="text-center text-white">Importes por Categoría</h2>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaImporteCategoria">
+                        </tbody>
+                    </table>
+            </div>
+            <!-- TABLA GANANCIAS MENSUALES -->
+            <div class="col-md-5 text-center p-3 mx-auto rounded bg-primary my-3">
+                <h2 class="text-white text-center">Ganancias mensuales</h2>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Mes</th>
+                        <th scope="col">Importe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Enero</th>
+                        <td id="ImporteEnero">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Febrero</th>
+                        <td id="ImporteFebrero">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Marzo</th>
+                        <td id="ImporteMarzo">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Abril</th>
+                        <td id="ImporteAbril">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Mayo</th>
+                        <td id="ImporteMayo">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Junio</th>
+                        <td id="ImporteJunio">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Julio</th>
+                        <td id="ImporteJulio">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Agosto</th>
+                        <td id="ImporteAgosto">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Septiembre</th>
+                        <td id="ImporteSeptiembre">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Octubre</th>
+                        <td id="ImporteOctubre">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Noviembre</th>
+                        <td id="ImporteNoviembre">Cargando...</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Diciembre</th>
+                        <td id="ImporteDiciembre">Cargando...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-2">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2024 HogarParaTodos. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Importamos el JS de Bootstrap v5.3.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
