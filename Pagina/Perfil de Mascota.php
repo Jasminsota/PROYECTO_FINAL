@@ -1,3 +1,8 @@
+<?
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,32 +80,60 @@
     <!-- PERFIL -->
      <div class="container-fluid">
         <div class="row mt-4">
-            <div class="col-lg-4 m-auto text-center p-4">
-                <img src="./IMG/PlaceholderMascota.jpg" class="img-fluid rounded border border-primary">
-            </div>
-            <div class="col-lg-7 mx-auto">
-                <div class="row">
-                    <a href="./Catalogo_adopcion.html" class="text-black fs-2">
-                        <i class="bi bi-arrow-left"></i>
-                        <span>Volver</span>
-                    </a>
-                </div>
-                <div class="row m-3">
+            <?php
+            include "conexion.php";
+            $conn = OpenConnection();
+            
+            $petID = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+            
+            if($petID <=0){
+                echo "ID invalido";
+                exit;
+            }
+            
+            $query = 'SELECT MASCOTAS.Edad, MASCOTAS.Personalidad, TIPOS_MASCOTAS.Tipo, RAZA_MASCOTAS.Raza, CARACTER_MASCOTA.Caracter_Mascota, MASCOTAS.Ruta_FotoMascota, MASCOTAS.Nombre
+                      FROM MASCOTAS
+                      JOIN TIPOS_MASCOTAS ON MASCOTAS.ID_Tipo = TIPOS_MASCOTAS.ID_Tipo
+                      JOIN RAZA_MASCOTAS on MASCOTAS.ID_Raza = RAZA_MASCOTAS.ID_Raza
+                      JOIN CARACTER_MASCOTA ON MASCOTAS.ID_Caracter = CARACTER_MASCOTA.ID_Caracter
+                      WHERE MASCOTAS.ID_MASCOTA=?';
+            
+            $params = array($petID);
+            
+            $resultado = sqlsrv_query($conn, $query, $params);
+            
+            if(!$resultado){
+                die(print_r(sqlsrv_errors(), true));
+            }
+            while($row = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC)){
+                echo '<div class="col-lg-4 m-auto text-center p-4">';
+                echo '<img src="' . $row['Ruta_FotoMascota'] . '" class="img-fluid rounded border border-primary">';
+                echo '</div>';
+                echo '<div class="col-lg-7 mx-auto">';
+                echo '<div class="row">
+                        <a href="./Catalogo_adopcion.php" class="text-black fs-2">
+                            <i class="bi bi-arrow-left"></i>
+                            <span>Volver</span>
+                        </a>
+                      </div>';
+                echo '<div class="row m-3">
                     <div class="container bg-primary text-white p-3 rounded">
-                        <h4 class="text-center" id="NombreMascota"> Cargando nombre de la mascota...</h3>
+                        <h4 class="text-center" id="NombreMascota">' . $row['Nombre'] . '</h3>
                         <p class="fs-5"><b>Tipo: </b></p>
-                        <p id="TipoMascota"> Cargando tipo de la mascota...<br></p>
+                        <p id="TipoMascota">' . $row['Tipo'] . '<br></p>
                         <p class="fs-5"><b>Raza:</b></p>
-                        <p id="RazaMascota">Cargando raza de la mascota...</p>
+                        <p id="RazaMascota">' . $row['Raza'] . '</p>
                         <p class="fs-5"><b>Caracter:</b></p>
-                        <p id="CaracterMascota">Cargando caracter de la mascota...</p>
+                        <p id="CaracterMascota">' . $row['Caracter_Mascota'] .'</p>
                         <p class="fs-5"><b>Edad:</b></p>
-                        <p id="EdadMascota">Cargando edad de la mascota...</p>
+                        <p id="EdadMascota">' . $row['Edad'] . '</p>
                         <p class="fs-5"><b>Descripción:</b></p>
-                        <p id="DescripcionMascota">Cargando descripción de la mascota...</p>
+                        <p id="DescripcionMascota">' . $row['Personalidad'] . '</p>
                     </div>
                 </div>
-            </div>
+            </div>';
+            }
+            ?>
         </div>
      </div>
      <div class="container text-center p-3">

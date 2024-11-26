@@ -52,7 +52,7 @@ $resultado = sqlsrv_query($conn, $query);
                             <a href="./ADMINISTRADOR_STOCK.html" class="nav-link btn bg-white rounded w-100 text-center">Productos</a>
                         </li>
                         <li class="nav-item p-2 py-md-1 my-auto">
-                            <a href="./ADMINISTRADOR_MASCOTAS.html" class="nav-link btn bg-white rounded w-100 text-center"><b>Mascotas en adopción</b></a>
+                            <a href="./ADMINISTRADOR_MASCOTAS.php" class="nav-link btn bg-white rounded w-100 text-center"><b>Mascotas en adopción</b></a>
                         </li>
                         <li class="nav-item p-2 py-md-1 my-auto">
                             <a href="./ADMINISTRADOR_SOLICITUDES.html" class="nav-link btn bg-white rounded w-100 text-center">Solicitudes de adopción</a>
@@ -175,7 +175,7 @@ $resultado = sqlsrv_query($conn, $query);
                                             <option selected>Raza del animal</option>
                                             <option value="1">Calico</option>
                                             <option value="2">Rothweiler</option>
-                                            <option value="3">Amarillo</option>
+                                            <option value="3">Tucan</option>
                                           </select>
                                     </div>
                                 </div>

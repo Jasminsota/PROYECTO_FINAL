@@ -5,7 +5,7 @@ include "conexion.php";
 $conn = OpenConnection();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $idusuario = 11;
+    $idusuario = 3;
     $idtipo = $_POST['Tipo'];
     $idraza = $_POST['Raza'];
     $idcaracter = $_POST['Caracter'];

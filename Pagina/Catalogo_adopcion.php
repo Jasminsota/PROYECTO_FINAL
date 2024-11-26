@@ -4,7 +4,7 @@ include "conexion.php";
 
 $conn = OpenConnection();
 
-$query = "SELECT MASCOTAS.Ruta_FotoMascota, MASCOTAS.Nombre, MASCOTAS.Edad, MASCOTAS.Personalidad, TAMANOS_MASCOTA.Tamano_Mascota
+$query = "SELECT MASCOTAS.ID_MASCOTA, MASCOTAS.Ruta_FotoMascota, MASCOTAS.Nombre, MASCOTAS.Edad, MASCOTAS.Personalidad, TAMANOS_MASCOTA.Tamano_Mascota
           FROM MASCOTAS
           JOIN TAMANOS_MASCOTA ON MASCOTAS.ID_Tamano = TAMANOS_MASCOTA.ID_Tamano";
 
@@ -127,7 +127,7 @@ $resultado = sqlsrv_query($conn, $query);
                 echo '<h5 class="card-title text-center">' . $row['Nombre'] . '</h5>';
                 echo '<p class="card-text text-center">Edad: ' . $row['Edad'] . ' | Tamaño: ' . $row['Tamano_Mascota'] . ' | ' . $row['Personalidad'] . '</p>';
                 echo '<div class="text-center">';
-                echo '<a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>';
+                echo '<a href="./Perfil de Mascota.php?id=' . $row['ID_MASCOTA'] . '" class="btn btn-primary ">ADOPCION</a>';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';

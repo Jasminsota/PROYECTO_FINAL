@@ -1,7 +1,7 @@
 <?php
 
 function OpenConnection(){
-    $serverName = 'localhost';
+    $serverName = 'localhost\SQLEXPRESS';
     $connectionOptions = [
         "Database" => "PIA_LBPROWEB",
     ];
