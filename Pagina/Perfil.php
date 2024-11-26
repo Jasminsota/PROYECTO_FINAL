@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+include "conexion.php";
+
+$conexion = OpenConnection();
+
+$correo = $_SESSION['usuario'];
+$query = "SELECT Nombre, Apellido, Telefono, Ciudad, Direccion, Codigo_Postal, Correo_Electronico FROM USUARIOS WHERE Correo_Electronico=?";
+$params = array($correo);
+$datos = sqlsrv_query($conexion, $query, $params);
+
+if($datos === false){
+    die("Error en la consulta: " . print_r(sqlsrv_errors(), true));
+}
+$row = sqlsrv_fetch_array($datos, SQLSRV_FETCH_ASSOC);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +85,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Catalogo_adopcion.html"> Conoce a nuestras mascotas </a>
+                        <a class="nav-link text-white" href="./Catalogo_adopcion.php"> Conoce a nuestras mascotas </a>
                     </li>
                 </ul>
             </div>
@@ -94,47 +114,47 @@
                         Consulta tu información personal. Toda tu información está segura con nosotros
                          y lista para que la revises cuando lo necesites.<br>
                     </p>
-                    <form>
+                    <form action="Perfil.php" method="POST">
                         <div class="row my-3">
                             <div class="col">
                                 <label for="Nombre" class="form-label"><b>Nombre:</b></label>
-                              <input type="text" class="form-control-plaintext bg-white rounded" id="Nombre" value="" readonly>
+                              <input type="text" class="form-control-plaintext bg-white rounded text-center" id="Nombre" value="<?php if($row){echo $row['Nombre'];}else{echo '';} ?>" readonly>
                             </div>
                             <div class="col">
                               <label for="Apellido" class="form-label"><b>Apellido: </b></label>
-                              <input type="text" class="form-control-plaintext bg-white rounded" id="Apellido" value="" readonly>
+                              <input type="text" class="form-control-plaintext bg-white rounded text-center" id="Apellido" value="<?php if($row){echo $row['Apellido'];}else{echo '';} ?>" readonly>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="Telefono" class="form-label"><b>Telefono:</b></label>
-                                <input type="text" class="form-control-plaintext bg-white rounded" id="Telefono" value="" readonly>
+                                <input type="text" class="form-control-plaintext bg-white rounded text-center" id="Telefono" value="<?php if($row){echo $row['Telefono'];}else{echo '';} ?>" readonly>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="Ciudad" class="form-label"><b>Ciudad:</b></label>
-                                <input type="text" class="form-control-plaintext bg-white rounded" id="Ciudad" value="" readonly>
+                                <input type="text" class="form-control-plaintext bg-white rounded text-center" id="Ciudad" value="<?php if($row){echo $row['Ciudad'];}else{echo '';} ?>" readonly>
                             </div>
                             <div class="col">
                                 <label for="Direccion" class="form-label"><b>Direccion</b></label>
-                                <input type="text" class="form-control-plaintext bg-white rounded" id="Direccion" value="" readonly>
+                                <input type="text" class="form-control-plaintext bg-white rounded text-center" id="Direccion" value="<?php if($row){echo $row['Direccion'];}else{echo '';} ?>" readonly>
                             </div>
                         </div>
                         
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="CP" class="form-label"><b>Código Postal:</b></label>
-                                <input type="text" class="form-control-plaintext bg-white rounded" id="CP" value="" readonly>
+                                <input type="text" class="form-control-plaintext bg-white rounded text-center" id="CP" value="<?php if($row){echo $row['Codigo_Postal'];}else{echo '';} ?>" readonly>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
                                 <label for="Email" class="form-label"><b>Email: </b></label>
-                                <input type="email" class="form-control-plaintext bg-white rounded mb-3" id="Email" value="" readonly>
+                                <input type="email" class="form-control-plaintext bg-white rounded mb-3 text-center" id="Email" value="<?php if($row){echo $row['Correo_Electronico'];}else{echo '';} ?>" readonly>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,18 @@
+<?php
+
+include "conexion.php";
+
+$conn = OpenConnection();
+
+$query = "SELECT MASCOTAS.Ruta_FotoMascota, MASCOTAS.Nombre, MASCOTAS.Edad, MASCOTAS.Personalidad, TAMANOS_MASCOTA.Tamano_Mascota
+          FROM MASCOTAS
+          JOIN TAMANOS_MASCOTA ON MASCOTAS.ID_Tamano = TAMANOS_MASCOTA.ID_Tamano";
+
+$resultado = sqlsrv_query($conn, $query);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +50,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Perfil.html"> Perfil </a>
+                        <a class="nav-link text-white" href="./Perfil.php"> Perfil </a>
                     </li>
 
                     <li class="nav-item mx-3">
@@ -65,7 +80,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-black" href="./Catalogo_adopcion.html"><b>Conoce a nuestras mascotas</b></a>
+                        <a class="nav-link text-black" href="./Catalogo_adopcion.php"><b>Conoce a nuestras mascotas</b></a>
                     </li>
                 </ul>
             </div>
@@ -103,56 +118,24 @@
                 </div>
             </div>
             <div class="row g-3 mt-1">
-                <!-- CARTA GENERICA DE MASCOTA / PLANTILLA DONDE SUSTITUIR DATOS-->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card w-100 p-1 w-75">
-                        <img src="IMG/IMG6.jpg" alt="" class="pet_photo">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Mr John Dog</h5>
-                            <p class="card-text text-center">Edad: N | Tamaño: 2.7182kg | Macho</p>
-                            <div class="text-center">
-                                <a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- FIN DE PLANTILLA DE MASCOTA-->
-                <div class="col-12 col-md-6 col-lg-3 ">
-                    <div class="card w-100 p-1">
-                        <img src="IMG/IMG5.jpg" alt="" class="pet_photo">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Ms Joanne Cat</h5>
-                            <p class="card-text text-center">Edad: N | Tamaño: 3.1415kg | Hembra</p>
-                            <div class="text-center">
-                                <a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 ">
-                    <div class="card w-100 p-1">
-                        <img src="IMG/lupa_busqueda.png" alt="" class="pet_photo">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Gutierrez Girafee</h5>
-                            <p class="card-text text-center">Edad: N | Tamaño: 1 mol kg | Macho</p>
-                            <div class="text-center">
-                                <a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 ">
-                    <div class="card w-100 p-1">
-                        <img src="IMG/lupa_busqueda.png" alt="" class="pet_photo">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Pony Stark</h5>
-                            <p class="card-text text-center">Edad: N | Tamaño: 9000kg | Macho</p>
-                            <div class="text-center">
-                                <a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                while($row = sqlsrv_fetch_array($resultado, SQLSRV_FETCH_ASSOC)){
+                echo '<div class="col-12 col-md-6 col-lg-3">';
+                echo '<div class="card w-100 p-1 w-75">';
+                echo '<img src="' . $row['Ruta_FotoMascota'] . '" alt="" class="pet_photo">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title text-center">' . $row['Nombre'] . '</h5>';
+                echo '<p class="card-text text-center">Edad: ' . $row['Edad'] . ' | Tamaño: ' . $row['Tamano_Mascota'] . ' | ' . $row['Personalidad'] . '</p>';
+                echo '<div class="text-center">';
+                echo '<a href="./Perfil de Mascota.html" class="btn btn-primary ">ADOPCION</a>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                }
+
+
+                ?>
             </div>
         </div>
     </div>

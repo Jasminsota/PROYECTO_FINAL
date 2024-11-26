@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Perfil.html"> Perfil </a>
+                        <a class="nav-link text-white" href="./Perfil.php"> Perfil </a>
                     </li>
 
                     <li class="nav-item mx-3">
@@ -65,7 +65,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Catalogo_adopcion.html"> Conoce a nuestras mascotas </a>
+                        <a class="nav-link text-white" href="./Catalogo_adopcion.php"> Conoce a nuestras mascotas </a>
                     </li>
                 </ul>
             </div>
@@ -95,14 +95,14 @@
                         que tenemos para ti. Explora nuestra tienda, revisa tus pedidos o conoce más 
                         sobre nuestras mascotas en adopción.<br>
                     </p>
-                    <form id="FormInicio">
+                    <form id="FormInicio" action="LOGIN.PHP" method="POST">
                         <div class="mb-3">
                             <label for="InputInicioCorreo" class="form-label"><b>Correo Electronico: </b></label>
-                            <input type="email" class="form-control" id="InputInicioCorreo" placeholder="Ingrese su correo electronico...">
+                            <input type="email" class="form-control" name="InputInicioCorreo" placeholder="Ingrese su correo electronico...">
                         </div>
                         <div class="mb-3">
                             <label for="InputInicioContraseña" class="form-label"><b>Contraseña:</b></label>
-                            <input type="password" class="form-control" id="InputInicioContraseña" placeholder="Ingrese su contraseña...">
+                            <input type="password" class="form-control" name="InputInicioContrasena" placeholder="Ingrese su contraseña...">
                         </div>
                         <button class="btn btn-light text-primary" type="submit"><b>Iniciar sesión</b></button>
                     </form>

@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Perfil.html"> Perfil </a>
+                        <a class="nav-link text-white" href="./Perfil.php"> Perfil </a>
                     </li>
 
                     <li class="nav-item mx-3">
@@ -65,7 +65,7 @@
                     </li>
 
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-white" href="./Catalogo_adopcion.html"> Conoce a nuestras mascotas </a>
+                        <a class="nav-link text-white" href="./Catalogo_adopcion.php"> Conoce a nuestras mascotas </a>
                     </li>
                 </ul>
             </div>
@@ -95,41 +95,41 @@
                         de tus productos favoritos para tus mascotas, presenta solicitudes de adopción y da el 
                         primer paso para cambiar la vida de una mascota en busca de un hogar.<br>
                     </p>
-                    <form id="FormRegistro">
+                    <form id="FormRegistro" action="CREAR_CUENTA.php" method="POST">
                         <div class="row my-3">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Nombre..." aria-label="Nombre" id="InputRegNombre">
+                              <input type="text" class="form-control" placeholder="Nombre..." aria-label="Nombre" name="InputRegNombre" required>
                             </div>
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Apellido..." aria-label="Apellido" id="InputRegApellido">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col">
-                              <input type="tel" class="form-control" placeholder="Telefono..." aria-label="Telefono" id="InputRegTelefono">
+                              <input type="text" class="form-control" placeholder="Apellido..." aria-label="Apellido" name="InputRegApellido" required>
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Ciudad..." aria-label="Ciudad" id="InputRegCiudad">
+                              <input type="tel" class="form-control" placeholder="Telefono..." aria-label="Telefono" name="InputRegTelefono" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                              <input type="text" class="form-control" placeholder="Ciudad..." aria-label="Ciudad" name="InputRegCiudad" required>
                             </div>
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Direccion..." aria-label="Direccion" id="InputRegDireccion">
+                              <input type="text" class="form-control" placeholder="Direccion..." aria-label="Direccion" name="InputRegDireccion" required>
                             </div>
                         </div>
                         
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Codigo postal..." aria-label="Codigo postal" id="InputRegCP">
+                                <input type="number" class="form-control" placeholder="Codigo postal..." aria-label="Codigo postal" name="InputRegCP" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
-                                <input type="email" class="form-control mb-3" placeholder="Email..." aria-label="Email" id="InputRegEmail">
-                            <input type="password" class="form-control" placeholder="Contraseña..." aria-label="password" id="InputRegContraseña">
+                                <input type="email" class="form-control mb-3" placeholder="Email..." aria-label="Email" name="InputRegEmail" required>
+                            <input type="password" class="form-control" placeholder="Contraseña..." aria-label="password" name="InputRegContrasena" required>
                             </div>
                         </div>
 
@@ -155,5 +155,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
     integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Importamos JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Script prueba de formulario-->
+    <script src="prueba.js"></script>
+
 </body>
 </html>
